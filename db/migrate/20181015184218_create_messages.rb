@@ -5,7 +5,6 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.references :conversation, index: true
       t.references :user, index: true
 
-
       t.timestamps
     end
   end
