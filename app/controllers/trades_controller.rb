@@ -25,7 +25,7 @@ class TradesController < ApplicationController
   # POST /trades
   # POST /trades.json
   def create
-    @trade = current_user.trades(trade_params)
+    @trade = current_user.trades.build(trade_params)
 
     respond_to do |format|
       if @trade.save
