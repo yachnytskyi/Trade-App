@@ -33,7 +33,8 @@
       <div class="inline-block"><%= @trade.user.name %></div>
     </div>
     <% if user_signed_in? && current_user.id != @trade.user_id %>
-      <%= link_to "Message #{@trade.user.name}", conversations_path(sender_id: current_user.id, newient_id: @trade.user.id), method: 'post', class:"button is-link" %>
+      <%= link_to "Message #{@trade.user.name}", conversations_path(sender_id: current_user.id, recipient_id: @trade.user.id), method: 'post', class:"button is-link" %>
+
     <% elsif user_signed_in? && current_user.id == @trade.user_id  %>
       <%= link_to "Conversations", conversations_path %>
     <% else %>
