@@ -33,7 +33,6 @@ README.md
 Rakefile   
 config.ru   
 package.json   
-yarn.lock
 
 REQUIREMENTS
 
